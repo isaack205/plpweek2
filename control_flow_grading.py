@@ -1,20 +1,32 @@
 #Control flow for grading students marks
 
 #Asks user to input name and marks
-studname = str(input("Enter student name:"))
-marks = float(input("Enter student marks(0-100):"))
+studName = str(input("Enter student name:"))
+regno = str(input("Enter Registration number:"))
+eng = int(input("Enter marks in English:"))
+kis = int(input("Enter marks in Kiswahili:"))
+math = int(input("Enter marks in Maths:"))
+physics = int(input("Enter marks in Physics:"))
 
-#Outputs name for the student name entered
-print("Student name:", studname)
+#Computation
+sum = eng + kis + math + physics
+avg = sum/4
+
+#Outputs name for the student name entered and registration number
+print("REPORT FORM")
+print("Student name:", studName)
+print("Reg NO:", regno)
+print("Total Marks -", sum)
+print("Average -", avg)
 
 #Grading system  based on marks
-if marks >= 70:
-    print("Grade: Excellent")
-elif marks >= 60:
-    print("Grade: Good")
-elif marks >= 50:
-    print("Grade: Satisfactory")
-elif marks >= 40:
-    print("Grade: Pass")
+if avg >= 70:
+    print("Grade: A (Excellent)")
+elif avg >= 60:
+    print("Grade: B (Good)")
+elif avg >= 50:
+    print("Grade: C (Satisfactory)")
+elif avg >= 40:
+    print("Grade: D (Pass)")
 else:
-    print("Grade: Fail")
+    print("Grade: E (Fail)")

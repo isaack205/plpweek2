@@ -1,6 +1,6 @@
 #Define function
 def greet(name):
-    print("Hello," + name + "!")
+    print("Hello, " + name + "!")
 
 #Calling the function
 greet("Isaac") # Outputs: Hello, Isaac!
